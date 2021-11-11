@@ -1,0 +1,17 @@
+.btn {
+  border: 2px solid rgb(21, 255, 0);
+  border-radius: 10px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+.sucess {
+  background-color: rgb(71, 138, 16);
+  color: white;
+}
+
+.danger {
+  background-color: red;
+  color: black;
+}
