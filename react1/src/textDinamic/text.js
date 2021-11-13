@@ -1,17 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./text.css";
-
-let frase1 = "";
 
 function TextD() {
   let [count, setCount] = useState(0);
-
   const frase = "Explorando o React";
-  console.log("rodou");
+
+  if (count <= frase.length) {
+    setTimeout(() => {
+      setCount(count + 1);
+    }, 200);
+  } else {
+    setCount(0);
+  }
 
   return (
     <div>
-      <h2>{"teste"}</h2>
+      <h2>{frase.slice(0, count)}</h2>
     </div>
   );
 }
