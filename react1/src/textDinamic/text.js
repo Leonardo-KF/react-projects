@@ -2,20 +2,23 @@ import React, { useState, useEffect } from "react";
 import "./text.css";
 
 function TextD() {
-  let [count, setCount] = useState(0);
-  const frase = "Explorando o React";
+  const frase2 = `O 
+Leo Fleck
+é
+um
+gênio`;
 
-  if (count <= frase.length) {
+  let [count1, setCount1] = useState(0);
+
+  if (count1 <= frase2.length) {
     setTimeout(() => {
-      setCount(count + 1);
+      setCount1(count1 + 1);
     }, 200);
-  } else {
-    setCount(0);
   }
 
   return (
     <div>
-      <h2>{frase.slice(0, count)}</h2>
+      <pre>{frase2.slice(0, count1)}</pre>
     </div>
   );
 }
