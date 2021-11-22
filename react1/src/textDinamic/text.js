@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./text.css";
+import Typewriter from "typewriter-effect";
 
 function TextD() {
-  const frase2 = `O 
+  const frase2 = `
+O 
 Leo Fleck
 é
 um
@@ -18,7 +20,12 @@ gênio`;
 
   return (
     <div>
-      <pre>{frase2.slice(0, count1)}</pre>
+      <Typewriter
+        onInit={(typewriter) => {
+          typewriter.typeString("Teste").start().stop();
+          typewriter.typeString("teste2").start();
+        }}
+      />
     </div>
   );
 }
